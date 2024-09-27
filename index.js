@@ -5,6 +5,7 @@ function encryptInputData() {
 
   for (const char of input) {
     if (charSet.has(char)) {
+      console.log(false);
       return false;
     }
     charSet.add(char);
@@ -20,5 +21,6 @@ function encryptInputData() {
     .map((b) => b.toString(16).padStart(2, "0"))
     .join("");
 
+  console.log(true);
   return hashHex;
 }
